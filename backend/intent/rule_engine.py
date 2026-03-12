@@ -1,7 +1,7 @@
 class RuleBasedIntentDetector:
     def detect(self, message):
         message = message.lower()
-        if any(word in message for word in ["show", "find", "search"])
+        if any(word in message for word in ["show", "find", "search"]):
             return "search_products"
         if any(word in message for word in ["red", "blue", "cotton", "under"]):
             return "refine_search"
